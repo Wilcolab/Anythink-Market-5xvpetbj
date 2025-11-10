@@ -83,6 +83,11 @@
  * toDotCase("こんにちは 世界"); // "こんにちは.世界"
  */
 
+function toDotCase(input) {
+    if (typeof input !== 'string') {
+        throw new TypeError('input must be a string');
+    }
+
     const trimmed = input.trim();
     if (trimmed === '') return '';
 
